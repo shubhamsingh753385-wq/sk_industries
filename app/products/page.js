@@ -7,6 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import WhatsAppButton from '@/components/WhatsAppButton'
+import pufGuardRoom from '../puf-guardroom.jpeg'
 
 const products = [
   {
@@ -38,7 +39,7 @@ const products = [
   {
     name: 'Portable Security Room',
     description: 'Portable and customized security cabins for various security needs',
-    image: './puf-guard-room.jpeg',
+    image: pufGuardRoom.src,
     features: [
       'Weather Proof Design',
       'Easy Installation & Relocation',
