@@ -51,7 +51,8 @@ const products = [
   {
     name: 'Window Canopy',
     description: 'Protective window covers and awnings to shield from sun and rain',
-    image: 'https://images.unsplash.com/photo-1762088779403-8b3c732ffafb',
+    image: 'https://www.pexels.com/g/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3RvL29sZC1ncmVlbi1hd25pbmctbW91bnRlZC1vdXRzaWRlLXRoZS1idWlsZGluZy1jb3Zlci10aGUtd2luZG93cy1nbTEwNTU2Nzc2OTItMjgyMDkwNjc1P3V0bV9zb3VyY2U9cGV4ZWxzJnV0bV9tZWRpdW09YWZmaWxpYXRlJnV0bV9jYW1wYWlnbj1zcG9uc29yZWRfcGhvdG8mdXRtX2NvbnRlbnQ9c3JwX2lubGluZV9wb3J0cmFpdF9tZWRpYSZ1dG1fdGVybT13aW5kb3clMjBmaWJlciUyMGNhbm9weSIsImRhdGEiOnsiZXhwZXJpbWVudHMiOnsid2FsbHBhcGVyX3F1ZXJ5X3JvdXRpbmciOiJ0cmVhdG1lbnQifSwicGFnZV9sb2NhbGUiOiJlbi1VUyIsImxvY2F0aW9uIjoiZ3JpZCIsImFkX3BhcnRuZXIiOiJnZXR0eSIsImFkX2Zvcm1hdCI6ImxhcmdlIiwiYWRfcGxhY2VtZW50IjoiMzAiLCJhZF9jcmVhdGl2ZSI6InBob3RvX3NlYXJjaF84IiwiYWRfYWN0aW9uIjoiY2xpY2siLCJhZF9pbXByZXNzaW9uX2lkIjoiOWQyMDc4ZTItOThmZC00MGU2LTgwMjgtNjdhMzc1OGVmMmI5IiwibWVkaWFfdHlwZSI6InBob3RvIiwicXVlcnkiOiJ3aW5kb3cgZmliZXIgY2Fub3B5In19/?h=1&du=afa8ba61-ccb8-4ea8-beba-b92858402797&dx=1&ds=da00351c-69fb-4fb6-85c4-8760989ac174',
+    
     features: [
       'UV Protection',
       'Weather Resistant',
@@ -77,7 +78,7 @@ const products = [
   {
     name: 'Portable Toilet',
     description: 'Portable sanitation solutions for construction sites, events, and temporary needs',
-    image: 'https://images.unsplash.com/photo-1701637783855-da67ab363cfa',
+    image: 'https://images.pexels.com/photos/37592634/pexels-photo-37592634.jpeg',
     features: [
       'Hygienic & Clean',
       'Easy to Move & Install',
