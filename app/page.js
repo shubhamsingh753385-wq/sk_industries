@@ -161,7 +161,7 @@ export default function HomePage() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-            {products.slice(0, 3).map((product, index) => (
+            {products.slice(0, 6).map((product, index) => (
               <motion.div
                 key={product.name}
                 initial={{ opacity: 0, y: 20 }}
