@@ -38,7 +38,7 @@ const products = [
   {
     name: 'Portable Security Room',
     description: 'Portable and customized security cabins for various security needs',
-    image: 'https://zentilobuild.com/assets/images/hero/puf-guardroom.jpeg',
+    image: './puf-guard-room.jpeg',
     features: [
       'Weather Proof Design',
       'Easy Installation & Relocation',
