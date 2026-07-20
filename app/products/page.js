@@ -12,7 +12,7 @@ const products = [
   {
     name: 'Air Turbo Ventilators',
     description: 'Industrial roof ventilation systems for optimal airflow and temperature control',
-    image: 'https://images.pexels.com/photos/22938256/pexels-photo-22938256.jpeg',
+    image: 'https://image.made-in-china.com/202f0j00BwihclGRhapN/Best-Quality-No-Power-Roof-Turbo-Fan-Wind-Turbine-Ventilator-for-Warehouse.webp',
     features: [
       'Energy Efficient Operation',
       'Weather Resistant Construction',

@@ -14,7 +14,7 @@ const products = [
   {
     name: 'Air Turbo Ventilators',
     description: 'Industrial roof ventilation systems for optimal airflow',
-    image: 'https://images.pexels.com/photos/22938256/pexels-photo-22938256.jpeg',
+    image: 'https://image.made-in-china.com/202f0j00BwihclGRhapN/Best-Quality-No-Power-Roof-Turbo-Fan-Wind-Turbine-Ventilator-for-Warehouse.webp',
     features: ['Energy Efficient', 'Weather Resistant', 'Low Maintenance', 'Quiet Operation']
   },
   {
@@ -96,7 +96,7 @@ export default function HomePage() {
       <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.pexels.com/photos/17180396/pexels-photo-17180396.jpeg"
+            src="https://images.pexels.com/photos/20170984/pexels-photo-20170984.jpeg"
             alt="Industrial Facility"
             className="w-full h-full object-cover"
           />
