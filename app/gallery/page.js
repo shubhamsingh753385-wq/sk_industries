@@ -144,7 +144,7 @@ export default function GalleryPage() {
       </section>
 
       {/* Category Filter */}
-      <section className="py-8 bg-muted/30 sticky top-16 z-40">
+      <section className="py-8 bg-muted/30 md:sticky md:top-16 md:z-40">
         <div className="container px-4">
           <div className="flex flex-wrap gap-2 justify-center">
             {categories.map((category) => (
@@ -166,7 +166,7 @@ export default function GalleryPage() {
 
       {/* Gallery Grid */}
       <section className="py-16 bg-background">
-        <div className="container px-4">
+        <div className="container px-4 mt-2 md:mt-0">
           <motion.div
             initial="initial"
             whileInView="animate"
