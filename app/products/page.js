@@ -91,7 +91,7 @@ const products = [
   {
     name: 'Container Office',
     description: 'Portable office spaces converted from shipping containers, offering modular workspace solutions',
-    image: 'https://images.pexels.com/photos/29415315/pexels-photo-29415315.jpeg',
+    image: 'https://images.pexels.com/photos/35385946/pexels-photo-35385946.jpeg',
     features: [
       'Portable & Modular',
       'Quick Setup',
@@ -101,23 +101,23 @@ const products = [
       'Customizable Interior'
     ]
   },
-  {
-    name: 'Polycarbonate Base Plates',
-    description: 'Durable and weather-resistant base plates for various industrial applications',
-    image: 'https://images.pexels.com/photos/36449518/pexels-photo-36449518.jpeg',
-    features: [
-      'High Durability',
-      'UV Protected',
-      'Impact Resistant',
-      'Custom Sizes Available',
-      'Easy Installation',
-      'Weather Proof'
-    ]
-  },
+  // {
+  //   name: 'Polycarbonate Base Plates',
+  //   description: 'Durable and weather-resistant base plates for various industrial applications',
+  //   image: 'https://images.pexels.com/photos/36449518/pexels-photo-36449518.jpeg',
+  //   features: [
+  //     'High Durability',
+  //     'UV Protected',
+  //     'Impact Resistant',
+  //     'Custom Sizes Available',
+  //     'Easy Installation',
+  //     'Weather Proof'
+  //   ]
+  // },
   {
     name: 'Polycarbonate Sheets',
     description: 'High-quality roofing and covering sheets with excellent light transmission',
-    image: 'https://images.pexels.com/photos/10443918/pexels-photo-10443918.jpeg',
+    image: 'https://images.pexels.com/photos/31735046/pexels-photo-31735046.jpeg',
     features: [
       'UV Resistant Coating',
       'Lightweight Yet Strong',

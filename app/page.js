@@ -50,7 +50,7 @@ const products = [
   {
     name: 'Container Office',
     description: 'Portable office spaces from shipping containers',
-    image: 'https://images.pexels.com/photos/29415315/pexels-photo-29415315.jpeg',
+    image: 'https://images.pexels.com/photos/35385946/pexels-photo-35385946.jpeg',
     features: ['Portable & Modular', 'Quick Setup', 'Fully Furnished', 'Cost Effective']
   },
   {
@@ -170,8 +170,8 @@ export default function HomePage() {
                 transition={{ delay: index * 0.1 }}
               >
                 <Card className="h-full hover:shadow-lg transition-shadow">
-                  <CardHeader className="p-0">
-                    <div className="relative h-48 overflow-hidden rounded-t-lg">
+                  <CardHeader className="p-0 pt-2">
+                    <div className="relative h-48 overflow-hidden rounded-t-lg mx-2">
                       <img
                         src={product.image}
                         alt={product.name}
