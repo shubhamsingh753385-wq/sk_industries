@@ -318,7 +318,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Map Section (Optional - can be added later) */}
+      {/* Map Section */}
       <section className="py-16 bg-muted/30">
         <div className="container px-4">
           <motion.div
@@ -332,9 +332,23 @@ export default function ContactPage() {
             <p className="text-lg text-muted-foreground mb-8">
               Located in Dadri, Uttar Pradesh, opposite Hero Motors
             </p>
-            <div className="bg-gray-200 rounded-lg h-96 flex items-center justify-center">
-              <p className="text-muted-foreground">Map integration can be added here</p>
+            <div className="overflow-hidden rounded-xl border bg-background shadow-sm">
+              <iframe
+                src="https://www.google.com/maps?q=SK%20Industries%20Dadri%20Uttar%20Pradesh%20203207&z=14&output=embed"
+                title="SK Industries Location"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="h-[400px] w-full"
+              />
             </div>
+            <a
+              href="https://maps.app.goo.gl/D2dkrBwx4vrHBC1Q9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex text-sm font-medium text-blue-700 hover:underline"
+            >
+              Open in Google Maps
+            </a>
           </motion.div>
         </div>
       </section>
