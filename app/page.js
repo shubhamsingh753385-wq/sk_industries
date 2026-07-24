@@ -20,7 +20,7 @@ const products = [
   {
     name: 'PUF Panel',
     description: 'Insulated sandwich panels with excellent thermal properties',
-    image: 'https://images.pexels.com/photos/20170984/pexels-photo-20170984.jpeg',
+    image: '/gallery/puf-panel.png',
     features: ['Thermal Insulation', 'Fire Resistant', 'Lightweight', 'Quick Installation']
   },
   {
@@ -32,13 +32,13 @@ const products = [
   {
     name: 'Window Canopy',
     description: 'Protective window covers and awnings',
-    image: 'https://images.pexels.com/photos/30024163/pexels-photo-30024163.jpeg',
+    image: '/gallery/window-canopy.jpg',
     features: ['UV Protection', 'Weather Resistant', 'Custom Designs', 'Easy Installation']
   },
   {
     name: 'Pre Fabricated Building',
     description: 'Modular buildings for industrial and office use',
-    image: 'https://images.pexels.com/photos/12444957/pexels-photo-12444957.jpeg',
+    image: 'https://images.pexels.com/photos/20170984/pexels-photo-20170984.jpeg',
     features: ['Quick Installation', 'Cost Effective', 'Customizable', 'High Strength']
   },
   {
@@ -56,7 +56,7 @@ const products = [
   {
     name: 'Polycarbonate Sheets',
     description: 'High-quality roofing and covering sheets',
-    image: 'https://images.pexels.com/photos/10443918/pexels-photo-10443918.jpeg',
+    image: '/gallery/Img6.jpeg',
     features: ['UV Resistant', 'Lightweight', 'High Transparency', '10 Year Warranty']
   }
 ]
@@ -109,12 +109,46 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-4">SK Industries</h1>
-            <p className="text-xl md:text-2xl mb-8">Quality Industrial Products & Portable Infrastructure Solutions</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" onClick={handleWhatsAppClick} className="bg-orange-500 hover:bg-orange-600 text-white">
+            {/* <div className="mx-auto w-48">
+  <img
+    src="/gallery/logo.png"
+    alt="SK Industries logo"
+    className="mx-auto w-full h-auto"
+  />
+</div> */}
+           <h1
+  className="text-5xl md:text-6xl font-extrabold mb-6 text-red-600"
+  style={{
+    textShadow: `
+      0 0 8px rgba(12, 12, 12, 0.9),
+      0 0 15px rgba(11, 10, 10, 0.8),
+      0 0 25px rgba(11, 10, 10, 0.6)
+    `,
+  }}
+>
+  SK Industries
+</h1>
+
+<p
+  className="text-xl md:text-3xl mb-10 font-semibold text-red-600"
+  style={{
+    textShadow: `
+      0 0 5px rgba(11, 11, 11, 0.9),
+      0 0 10px rgba(12, 12, 12, 0.8)
+    `,
+  }}
+>
+  Quality Industrial Products & Portable Infrastructure Solutions
+</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center ">
+              <Link href="/contact">
+                <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">
+                  Get a Quote
+                </Button>
+              </Link>
+              {/* <Button size="lg" onClick={handleWhatsAppClick} className="bg-orange-500 hover:bg-orange-600 text-white">
                 Get a Quote
-              </Button>
+              </Button> */}
               <Button size="lg" onClick={handleWhatsAppClick} className="bg-green-500 hover:bg-green-600 text-white">
                 WhatsApp Us
               </Button>

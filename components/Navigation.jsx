@@ -36,11 +36,28 @@ export default function Navigation() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
+          {/* <Link href="/" className="flex items-center space-x-2">
             <div className="text-xl md:text-2xl font-bold text-blue-900">
               SK Industries
             </div>
-          </Link>
+          </Link> */}
+          {/* <Link href="/" className="flex items-center space-x-2">
+            <img src="/gallery/logo.png" alt="SK Industries logo" className="h-10 w-auto" />
+            <span className="text-xl md:text-2xl font-bold text-red-600">
+              SK Industries
+            </span>
+          </Link> */}
+
+          <Link href="/" className="flex items-center space-x-1 -ml-1">
+  <img
+    src="/gallery/logo.png"
+    alt="SK Industries logo"
+    className="h-14 w-auto"
+  />
+  <span className="text-xl md:text-2xl font-bold text-red-600">
+    SK Industries
+  </span>
+</Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1">

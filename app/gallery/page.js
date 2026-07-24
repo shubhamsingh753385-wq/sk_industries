@@ -9,43 +9,43 @@ import { Dialog, DialogContent } from '@/components/ui/dialog'
 
 const galleryImages = [
   {
-    src: 'https://images.pexels.com/photos/29160023/pexels-photo-29160023.jpeg',
-    alt: 'Portable Security Room 1',
-    category: 'Portable Security Room'
-  },
-  {
-    src: 'https://images.pexels.com/photos/13460092/pexels-photo-13460092.jpeg',
-    alt: 'Portable Security Room 2',
-    category: 'Portable Security Room'
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1701637783855-da67ab363cfa',
-    alt: 'Portable Toilet 1',
-    category: 'Portable Toilet'
-  },
-  {
-    src: 'https://images.pexels.com/photos/25461701/pexels-photo-25461701.jpeg',
-    alt: 'Portable Toilet 2',
-    category: 'Portable Toilet'
-  },
-  {
-    src: 'https://images.pexels.com/photos/10443918/pexels-photo-10443918.jpeg',
-    alt: 'Polycarbonate Sheet 1',
-    category: 'Polycarbonate Sheets'
-  },
-  {
-    src: 'https://images.pexels.com/photos/8221391/pexels-photo-8221391.jpeg',
-    alt: 'Polycarbonate Sheet 2',
-    category: 'Polycarbonate Sheets'
-  },
-  {
-    src: 'https://images.pexels.com/photos/22938256/pexels-photo-22938256.jpeg',
+    src: '/gallery/Img1.jpeg',
     alt: 'Air Turbo Ventilator 1',
     category: 'Air Turbo Ventilators'
   },
   {
-    src: 'https://images.unsplash.com/photo-1652463349034-85793fa26b7e',
+    src: '/gallery/Img2.jpeg',
+    alt: 'Polycarbonate Sheet 1',
+    category: 'Polycarbonate Sheets'
+  },
+  {
+    src: '/gallery/Img3.jpeg',
+    alt: 'Portable Guard Room 1',
+    category: 'Portable Guard Rooms'
+  },
+  {
+    src: '/gallery/Img4.jpeg',
     alt: 'Air Turbo Ventilator 2',
+    category: 'Air Turbo Ventilators'
+  },
+  {
+    src: '/gallery/Img5.jpeg',
+    alt: 'Polycarbonate Sheet 2',
+    category: 'Polycarbonate Sheets'
+  },
+  {
+    src: '/gallery/Img6.jpeg',
+    alt: 'Polycarbonate Sheet 3',
+    category: 'Polycarbonate Sheets'
+  },
+  {
+    src: '/gallery/Img7.jpeg',
+    alt: 'Polycarbonate Sheet 4',
+    category: 'Polycarbonate Sheets'
+  },
+  {
+    src: '/gallery/Img8.jpeg',
+    alt: 'Air Turbo Ventilator 3',
     category: 'Air Turbo Ventilators'
   },
   {

@@ -25,7 +25,7 @@ const products = [
   {
     name: 'PUF Panel',
     description: 'Insulated sandwich panels for construction walls, roofs, and partitions with excellent thermal properties',
-    image: 'https://images.pexels.com/photos/20170984/pexels-photo-20170984.jpeg',
+    image: '/gallery/puf-panel.png',
     features: [
       'Excellent Thermal Insulation',
       'Fire Resistant',
@@ -51,7 +51,7 @@ const products = [
   {
     name: 'Window Canopy',
     description: 'Protective window covers and awnings to shield from sun and rain',
-    image: 'https://images.pexels.com/photos/30024163/pexels-photo-30024163.jpeg',
+    image: '/gallery/window-canopy.jpg',
     
     features: [
       'UV Protection',
@@ -65,7 +65,7 @@ const products = [
   {
     name: 'Pre Fabricated Building',
     description: 'Modular buildings constructed off-site and assembled on location for industrial and office use',
-    image: 'https://images.pexels.com/photos/12444957/pexels-photo-12444957.jpeg',
+    image: 'https://images.pexels.com/photos/20170984/pexels-photo-20170984.jpeg',
     features: [
       'Quick Installation',
       'Cost Effective',
@@ -91,7 +91,7 @@ const products = [
   {
     name: 'Container Office',
     description: 'Portable office spaces converted from shipping containers, offering modular workspace solutions',
-    image: 'https://images.pexels.com/photos/35385946/pexels-photo-35385946.jpeg',
+    image: '/gallery/container.png',
     features: [
       'Portable & Modular',
       'Quick Setup',
@@ -117,7 +117,7 @@ const products = [
   {
     name: 'Polycarbonate Sheets',
     description: 'High-quality roofing and covering sheets with excellent light transmission',
-    image: 'https://images.pexels.com/photos/31735046/pexels-photo-31735046.jpeg',
+    image: '/gallery/Img6.jpeg',
     features: [
       'UV Resistant Coating',
       'Lightweight Yet Strong',
