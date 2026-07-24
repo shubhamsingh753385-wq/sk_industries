@@ -29,7 +29,7 @@ const galleryImages = [
     category: 'Air Turbo Ventilators'
   },
   {
-    src: '/gallery/Img5.jpeg',
+    src: '/gallery/img5.jpeg',
     alt: 'Polycarbonate Sheet 2',
     category: 'Polycarbonate Sheets'
   },
@@ -44,7 +44,7 @@ const galleryImages = [
     category: 'Polycarbonate Sheets'
   },
   {
-    src: '/gallery/Img8.jpeg',
+    src: '/gallery/img8.jpeg',
     alt: 'Air Turbo Ventilator 3',
     category: 'Air Turbo Ventilators'
   },
