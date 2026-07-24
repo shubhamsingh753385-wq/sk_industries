@@ -96,7 +96,7 @@ export default function HomePage() {
       <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.pexels.com/photos/20170984/pexels-photo-20170984.jpeg"
+            src="/gallery/main.png"
             alt="Industrial Facility"
             className="w-full h-full object-cover"
           />
