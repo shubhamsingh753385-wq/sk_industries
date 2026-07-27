@@ -21,7 +21,7 @@ const galleryImages = [
   {
     src: '/gallery/Img3.jpeg',
     alt: 'Portable Guard Room 1',
-    category: 'Portable Guard Rooms'
+    category: 'Portable Security Room'
   },
   {
     src: '/gallery/Img4.jpeg',
@@ -54,53 +54,63 @@ const galleryImages = [
     category: 'PUF Panel'
   },
   {
-    src: 'https://images.pexels.com/photos/38613440/pexels-photo-38613440.jpeg',
+    src: '/gallery/puf-panel.png',
     alt: 'PUF Panel 2',
     category: 'PUF Panel'
   },
   {
-    src: 'https://images.unsplash.com/photo-1762088779403-8b3c732ffafb',
-    alt: 'Window Canopy',
+    src: '/gallery/window-canopy.jpg',
+    alt: 'Window Canopy 1',
     category: 'Window Canopy'
   },
   {
-    src: 'https://images.pexels.com/photos/12444957/pexels-photo-12444957.jpeg',
+    src: '/gallery/window-canopy-2.jpg',
+    alt: 'Window Canopy 2',
+    category: 'Window Canopy'
+  },
+  {
+    src: '/gallery/window-canopy-3.jpeg',
+    alt: 'Window Canopy 3',
+    category: 'Window Canopy'
+  },
+  {
+    src: '/gallery/prefabricated.png',
     alt: 'Pre Fabricated Building 1',
     category: 'Pre Fabricated Building'
   },
   {
-    src: 'https://images.unsplash.com/photo-1504149730145-54e4ebcaf03e',
+    src: '/gallery/prefabricated2.jpg',
     alt: 'Pre Fabricated Building 2',
     category: 'Pre Fabricated Building'
   },
   {
-    src: 'https://images.pexels.com/photos/29415315/pexels-photo-29415315.jpeg',
+    src: 'gallery/container.png',
     alt: 'Container Office',
     category: 'Container Office'
   },
   {
-    src: 'https://images.pexels.com/photos/36449518/pexels-photo-36449518.jpeg',
+    src: '/gallery/polycarbonate-base-plate.jpg',
     alt: 'Polycarbonate Base Plate',
     category: 'Polycarbonate Base Plates'
   },
   {
-    src: 'https://images.pexels.com/photos/48895/roof-plate-tiles-brick-black-48895.jpeg',
-    alt: 'Installation Project 1',
-    category: 'Installation Projects'
+    src: 'https://images.pexels.com/photos/37592634/pexels-photo-37592634.jpeg',
+    alt: 'portable Toilet',
+    category: 'Portable Toilet'
   },
-  {
-    src: 'https://images.pexels.com/photos/17180396/pexels-photo-17180396.jpeg',
-    alt: 'Industrial Facility',
-    category: 'Installation Projects'
-  },
-  {
-    src: 'https://images.pexels.com/photos/3089681/pexels-photo-3089681.jpeg',
-    alt: 'Manufacturing Facility',
-    category: 'Installation Projects'
-  }
+  // {
+  //   src: '',
+  //   alt: 'Industrial Facility',
+  //   category: 'Installation Projects'
+  // },
+  // {
+  //   src: '',
+  //   alt: 'Manufacturing Facility',
+  //   category: 'Installation Projects'
+  // }
 ]
 
-const categories = ['All', 'Air Turbo Ventilators', 'PUF Panel', 'Portable Security Room', 'Window Canopy', 'Pre Fabricated Building', 'Portable Toilet', 'Container Office', 'Polycarbonate Sheets', 'Polycarbonate Base Plates', 'Installation Projects']
+const categories = ['All', 'Air Turbo Ventilators', 'PUF Panel', 'Portable Security Room', 'Window Canopy', 'Pre Fabricated Building', 'Portable Toilet', 'Container Office', 'Polycarbonate Sheets', 'Polycarbonate Base Plates']
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },

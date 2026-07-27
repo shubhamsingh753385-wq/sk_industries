@@ -101,19 +101,19 @@ const products = [
       'Customizable Interior'
     ]
   },
-  // {
-  //   name: 'Polycarbonate Base Plates',
-  //   description: 'Durable and weather-resistant base plates for various industrial applications',
-  //   image: 'https://images.pexels.com/photos/36449518/pexels-photo-36449518.jpeg',
-  //   features: [
-  //     'High Durability',
-  //     'UV Protected',
-  //     'Impact Resistant',
-  //     'Custom Sizes Available',
-  //     'Easy Installation',
-  //     'Weather Proof'
-  //   ]
-  // },
+  {
+    name: 'Polycarbonate Base Plates',
+    description: 'Durable and weather-resistant base plates for various industrial applications',
+    image: '/gallery/polycarbonate-base-plate.jpg',
+    features: [
+      'High Durability',
+      'UV Protected',
+      'Impact Resistant',
+      'Custom Sizes Available',
+      'Easy Installation',
+      'Weather Proof'
+    ]
+  },
   {
     name: 'Polycarbonate Sheets',
     description: 'High-quality roofing and covering sheets with excellent light transmission',
