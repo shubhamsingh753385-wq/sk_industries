@@ -1,0 +1,2521 @@
+/* =========================================================
+   SK INDUSTRIES - QUOTATION SYSTEM
+   4 PAGE A4 QUOTATION
+   SCREEN PREVIEW + PRINT FIX
+========================================================= */
+
+
+/* =========================================================
+   PREVIEW OVERLAY
+========================================================= */
+
+.quotation-preview-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  background: #525659;
+
+  overflow-y: auto;
+
+  padding: 80px 20px 40px;
+}
+
+
+/* =========================================================
+   PREVIEW TOOLBAR
+========================================================= */
+
+.quotation-preview-toolbar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 64px;
+
+  background: #0f172a;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 10px 20px;
+
+  z-index: 10000;
+
+  box-sizing: border-box;
+}
+
+
+.preview-close-btn,
+.preview-print-btn {
+  border: none;
+
+  border-radius: 6px;
+
+  padding: 10px 18px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+.preview-close-btn {
+  background: #475569;
+
+  color: white;
+}
+
+
+.preview-close-btn:hover {
+  background: #334155;
+}
+
+
+.preview-print-btn {
+  background: #f97316;
+
+  color: white;
+}
+
+
+.preview-print-btn:hover {
+  background: #ea580c;
+}
+
+
+/* =========================================================
+   PRINT CONTAINER
+========================================================= */
+
+#quotation-print {
+  width: 210mm;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   COMMON A4 PAGE
+========================================================= */
+
+.quotation-page {
+  width: 210mm;
+
+  height: 297mm;
+
+  background: white;
+
+  margin: 0 auto 20px;
+
+  padding: 14mm;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  position: relative;
+
+  color: #111827;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   PAGE 1
+   COMPANY COVER
+========================================================= */
+
+.quotation-cover {
+  width: 100%;
+
+  height: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  box-sizing: border-box;
+}
+
+
+/* ---------- Company Header ---------- */
+
+.cover-header {
+  display: flex;
+
+  gap: 25px;
+
+  align-items: center;
+
+  border-bottom: 3px solid #1e3a8a;
+
+  padding-bottom: 18px;
+}
+
+
+/* ---------- Logo ---------- */
+
+.company-logo-box {
+  width: 150px;
+
+  min-width: 150px;
+
+  flex-shrink: 0;
+}
+
+
+.company-logo {
+  width: 100%;
+
+  height: auto;
+
+  max-height: 120px;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+
+/* ---------- Company Details ---------- */
+
+.company-details {
+  flex: 1;
+}
+
+
+.company-details h1 {
+  font-size: 30px;
+
+  color: #ff0505e2;
+
+  margin: 0 0 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+}
+
+
+.company-details p {
+  font-size: 12px;
+
+  line-height: 1.5;
+
+  margin: 2px 0;
+
+  color: #1f2937;
+}
+
+
+/* ---------- Cover Title ---------- */
+
+.cover-title {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 30px 0 20px;
+}
+
+
+.cover-title h2 {
+  font-size: 32px;
+
+  color: #ea580c;
+
+  margin: 0 0 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+}
+
+
+.cover-title p {
+  font-size: 14px;
+
+  color: #475569;
+
+  margin: 0;
+}
+
+
+/* ---------- Product Images ---------- */
+
+.cover-products {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px;
+
+  margin-top: 10px;
+}
+
+
+.cover-product-card {
+  border: 1px solid #d1d5db;
+
+  border-radius: 8px;
+
+  overflow: hidden;
+
+  text-align: center;
+
+  background: white;
+}
+
+
+.cover-product-card img {
+  width: 100%;
+
+  height: 150px;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+
+.cover-product-card p {
+  font-weight: 600;
+
+  font-size: 13px;
+
+  padding: 8px;
+
+  margin: 0;
+
+  color: #1f2937;
+}
+
+
+/* =========================================================
+   COVER INTRODUCTION
+========================================================= */
+
+.cover-introduction {
+  margin-top: 22px;
+
+  padding: 14px 18px;
+
+  border-left: 4px solid #ea580c;
+
+  border-right: 1px solid #d1d5db;
+
+  border-top: 1px solid #d1d5db;
+
+  border-bottom: 1px solid #d1d5db;
+
+  background: #f8fafc;
+
+  text-align: center;
+}
+
+
+.cover-introduction h3 {
+  margin: 0 0 7px;
+
+  color: #1e3a8a;
+
+  font-size: 14px;
+
+  font-weight: 800;
+}
+
+
+.cover-introduction p {
+  margin: 0;
+
+  color: #475569;
+
+  font-size: 11px;
+
+  line-height: 1.6;
+}
+
+
+/* ---------- Deals In ---------- */
+
+.deals-section {
+  margin-top: auto;
+
+  border-top: 2px solid #1e3a8a;
+
+  padding-top: 15px;
+
+  text-align: center;
+}
+
+
+.deals-section h3 {
+  color: #1e3a8a;
+
+  font-size: 18px;
+
+  margin: 0 0 8px;
+
+  font-weight: 800;
+}
+
+
+.deals-section p {
+  font-size: 11px;
+
+  line-height: 1.7;
+
+  margin: 0;
+
+  color: #374151;
+}
+
+
+/* ---------- Cover Footer ---------- */
+
+.cover-footer {
+  margin-top: 18px;
+
+  padding: 12px;
+
+  background: #1e3a8a;
+
+  color: white;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   PAGE 2
+   QUOTATION
+========================================================= */
+
+.quotation-content {
+  width: 100%;
+
+  height: 100%;
+
+  font-size: 11px;
+
+  box-sizing: border-box;
+}
+
+
+/* ---------- Quotation Header ---------- */
+
+.quotation-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  border-bottom: 2px solid #1e3a8a;
+
+  padding-bottom: 12px;
+}
+
+
+.quotation-header h1 {
+  color: #ff2121;
+
+  font-size: 24px;
+
+  margin: 0 0 5px;
+
+  font-weight: 800;
+}
+
+
+.quotation-header p {
+  margin: 2px 0;
+
+  line-height: 1.4;
+
+  color: #374151;
+}
+
+
+/* ---------- Quotation Meta ---------- */
+
+.quotation-meta {
+  text-align: right;
+
+  min-width: 180px;
+}
+
+
+.quotation-meta h2 {
+  font-size: 25px;
+
+  color: #ff2121;
+
+  margin: 0 0 10px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   CUSTOMER DETAILS
+========================================================= */
+
+.customer-section {
+  margin-top: 18px;
+}
+
+
+.customer-section h3,
+.bank-details h3 {
+  background: #1e3a8a;
+
+  color: white;
+
+  padding: 7px 10px;
+
+  font-size: 13px;
+
+  margin: 0;
+
+  font-weight: 700;
+}
+
+
+.customer-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  border: 1px solid #d1d5db;
+}
+
+
+.customer-grid > div {
+  padding: 8px;
+
+  border-bottom: 1px solid #d1d5db;
+
+  min-height: 32px;
+
+  box-sizing: border-box;
+}
+
+
+.customer-grid .full-width {
+  grid-column: 1 / -1;
+}
+
+
+/* =========================================================
+   PRODUCT TABLE
+========================================================= */
+
+.quotation-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  margin-top: 18px;
+
+  border: 1px solid #9ca3af;
+
+  table-layout: fixed;
+}
+
+
+.quotation-table th {
+  background: #1e3a8a;
+
+  color: white;
+
+  padding: 8px;
+
+  border: 1px solid #9ca3af;
+
+  font-weight: 700;
+
+  text-align: center;
+}
+
+
+.quotation-table td {
+  padding: 8px;
+
+  border: 1px solid #d1d5db;
+
+  vertical-align: top;
+
+  word-wrap: break-word;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* ---------- Column Widths ---------- */
+
+.quotation-table th:nth-child(1),
+.quotation-table td:nth-child(1) {
+  width: 8%;
+
+  text-align: center;
+}
+
+
+.quotation-table th:nth-child(2),
+.quotation-table td:nth-child(2) {
+  width: 48%;
+
+  text-align: left;
+}
+
+
+.quotation-table th:nth-child(3),
+.quotation-table td:nth-child(3) {
+  width: 10%;
+
+  text-align: center;
+}
+
+
+.quotation-table th:nth-child(4),
+.quotation-table td:nth-child(4) {
+  width: 17%;
+
+  text-align: right;
+}
+
+
+.quotation-table th:nth-child(5),
+.quotation-table td:nth-child(5) {
+  width: 17%;
+
+  text-align: right;
+}
+
+
+/* ---------- Product Description ---------- */
+
+.item-description {
+  color: #64748b;
+
+  margin-top: 3px;
+
+  font-size: 10px;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   BILLING
+========================================================= */
+
+.billing-section {
+  width: 45%;
+
+  margin-left: auto;
+
+  margin-top: 15px;
+}
+
+
+.billing-row {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 5px 0;
+
+  gap: 20px;
+}
+
+
+.billing-total {
+  border-top: 2px solid #1e3a8a;
+
+  margin-top: 5px;
+
+  padding-top: 8px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  font-size: 15px;
+
+  font-weight: bold;
+}
+
+
+/* =========================================================
+   TRANSPORT NOTE
+========================================================= */
+
+.transport-note {
+  margin-top: 18px;
+
+  padding: 10px;
+
+  border: 1px solid #f59e0b;
+
+  background: #fffbeb;
+
+  display: flex;
+
+  gap: 6px;
+
+  align-items: flex-start;
+
+  color: #78350f;
+}
+
+
+/* =========================================================
+   BANK DETAILS - PAGE 2
+========================================================= */
+
+.bank-details {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+.bank-grid {
+  border: 1px solid #d1d5db;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+}
+
+
+.bank-grid > div {
+  padding: 7px;
+
+  border-bottom: 1px solid #d1d5db;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   QUOTATION SIGNATURE
+========================================================= */
+/* =========================================================
+   PAGE 2 SIGNATURE
+   FIXED AT BOTTOM RIGHT
+========================================================= */
+
+.quotation-signature {
+  position: absolute;
+
+  right: 14mm;
+  bottom: 14mm;
+
+  width: 190px;
+
+  text-align: center;
+
+  font-size: 11px;
+
+  color: #111827;
+}
+
+.quotation-signature p {
+  margin: 0;
+
+  font-weight: 600;
+}
+
+.quotation-signature .signature-space {
+  height: 45px;
+}
+
+.quotation-signature strong {
+  display: block;
+
+  border-top: 1px solid #111827;
+
+  padding-top: 5px;
+}
+
+/* =========================================================
+   PAGE 3
+   COMMERCIAL
+========================================================= */
+
+.commercial-company-box {
+  border: 1px solid #d1d5db;
+
+  padding: 15px;
+
+  margin-bottom: 20px;
+
+  background: #f8fafc;
+
+  border-radius: 4px;
+}
+
+
+.commercial-company-box h2 {
+  color: #ff2121;
+
+  font-size: 20px;
+
+  margin: 0 0 8px;
+
+  font-weight: 800;
+}
+
+
+.commercial-company-box p {
+  margin: 4px 0;
+
+  line-height: 1.5;
+}
+
+
+/* ---------- Common Information Section ---------- */
+
+.info-section {
+  margin-bottom: 18px;
+}
+
+
+.info-section h2 {
+  color: #1e3a8a;
+
+  font-size: 16px;
+
+  border-bottom: 1px solid #d1d5db;
+
+  padding-bottom: 5px;
+
+  margin: 0 0 8px;
+
+  font-weight: 700;
+}
+
+
+.info-section p {
+  margin: 5px 0;
+
+  line-height: 1.6;
+}
+
+
+.info-section ul,
+.info-section ol {
+  margin-top: 5px;
+
+  padding-left: 25px;
+}
+
+
+.info-section li {
+  margin-bottom: 4px;
+
+  line-height: 1.5;
+}
+
+
+/* ---------- Large Bank Details ---------- */
+
+.bank-details-large {
+  border: 1px solid #d1d5db;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+}
+
+
+.bank-details-large > div {
+  padding: 12px;
+
+  border-bottom: 1px solid #d1d5db;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+
+  box-sizing: border-box;
+}
+
+
+.bank-details-large strong {
+  color: #1e3a8a;
+
+  font-size: 11px;
+}
+
+
+.bank-details-large span {
+  font-size: 12px;
+
+  color: #111827;
+}
+
+
+/* ---------- Commercial Note ---------- */
+
+.commercial-note {
+  /* -webkit-margin-bottom-collapse: 20px; */
+  margin-block-start: auto;
+
+  padding: 12px;
+
+  border: 1px solid #f59e0b;
+
+  background: #fffbeb;
+
+  color: #78350f;
+}
+
+
+.commercial-note p {
+  margin: 5px 0 0;
+
+  line-height: 1.5;
+}
+
+
+/* ---------- Commercial Signature ---------- */
+
+.commercial-signature {
+  margin-top: 35px;
+
+  margin-left: auto;
+
+  width: 200px;
+
+  text-align: center;
+}
+
+
+.commercial-signature p {
+  font-weight: 600;
+
+  margin: 0;
+}
+
+
+.commercial-signature .signature-space {
+  height: 45px;
+}
+
+
+/* =========================================================
+   PAGE 4
+   ABOUT + TERMS
+========================================================= */
+
+.information-page {
+  width: 100%;
+
+  height: 100%;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+
+  display: flex;
+
+  flex-direction: column;
+
+  box-sizing: border-box;
+}
+
+
+/* ---------- Page Heading ---------- */
+
+.information-page > h1 {
+  text-align: center;
+
+  color: #ff2121;
+
+  font-size: 25px;
+
+  border-bottom: 2px solid #1e3a8a;
+
+  padding-bottom: 12px;
+
+  margin: 0 0 20px;
+
+  font-weight: 800;
+}
+
+
+/* ---------- Section ---------- */
+
+.information-page .info-section {
+  margin-bottom: 18px;
+}
+
+
+.information-page .info-section h2 {
+  color: #1e3a8a;
+
+  font-size: 16px;
+
+  border-bottom: 1px solid #d1d5db;
+
+  padding-bottom: 5px;
+
+  margin-bottom: 8px;
+
+  font-weight: 700;
+}
+
+
+.information-page .info-section p {
+  margin: 5px 0;
+
+  line-height: 1.6;
+}
+
+
+.information-page .info-section ul,
+.information-page .info-section ol {
+  margin-top: 5px;
+
+  padding-left: 25px;
+}
+
+
+.information-page .info-section li {
+  margin-bottom: 4px;
+
+  line-height: 1.5;
+}
+
+
+/* ---------- Page 4 Footer ---------- */
+
+.info-footer {
+  margin-top: auto;
+
+  padding: 15px;
+
+  background: #1e3a8a;
+
+  color: white;
+
+  text-align: center;
+
+  font-size: 11px;
+
+  line-height: 1.5;
+}
+
+
+.info-footer p {
+  margin: 3px 0;
+}
+
+
+/* =========================================================
+   =========================================================
+   PRINT ONLY
+   IMPORTANT:
+   DO NOT CHANGE SCREEN PREVIEW
+   =========================================================
+========================================================= */
+
+@media print {
+
+  /* -----------------------------------------
+     A4 PAPER
+  ----------------------------------------- */
+
+  @page {
+    size: A4 portrait;
+
+    margin: 0;
+  }
+
+
+  /* -----------------------------------------
+     BASIC DOCUMENT RESET
+  ----------------------------------------- */
+
+  html,
+  body {
+    width: 210mm !important;
+
+    min-width: 210mm !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    background: white !important;
+
+    overflow: visible !important;
+  }
+
+
+  /* -----------------------------------------
+     HIDE EVERYTHING BY DEFAULT
+  ----------------------------------------- */
+
+  body > * {
+    display: none !important;
+  }
+
+
+  /* -----------------------------------------
+     FIND THE NEXT.JS ROOT
+  ----------------------------------------- */
+
+  body > div {
+    display: block !important;
+
+    width: 100% !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+  }
+
+
+  /* -----------------------------------------
+     PREVIEW OVERLAY BECOMES PRINT DOCUMENT
+  ----------------------------------------- */
+
+  .quotation-preview-overlay {
+    display: block !important;
+
+    position: static !important;
+
+    inset: auto !important;
+
+    width: 210mm !important;
+
+    height: auto !important;
+
+    min-height: 0 !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    background: white !important;
+
+    overflow: visible !important;
+  }
+
+
+  /* -----------------------------------------
+     TOOLBAR HIDDEN
+  ----------------------------------------- */
+
+  .quotation-preview-toolbar {
+    display: none !important;
+  }
+
+
+  /* -----------------------------------------
+     PRINT CONTAINER
+  ----------------------------------------- */
+
+  #quotation-print {
+    display: block !important;
+
+    width: 210mm !important;
+
+    min-width: 210mm !important;
+
+    max-width: 210mm !important;
+
+    height: auto !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    background: white !important;
+  }
+
+
+  /* -----------------------------------------
+     EVERY PAGE = EXACTLY ONE A4 PAGE
+  ----------------------------------------- */
+
+  #quotation-print > .quotation-page {
+
+    display: block !important;
+
+    width: 210mm !important;
+
+    min-width: 210mm !important;
+
+    max-width: 210mm !important;
+
+    height: 297mm !important;
+
+    min-height: 297mm !important;
+
+    max-height: 297mm !important;
+
+    margin: 0 !important;
+
+    padding: 14mm !important;
+
+    box-sizing: border-box !important;
+
+    background: white !important;
+
+    position: relative !important;
+
+    overflow: hidden !important;
+
+    box-shadow: none !important;
+
+    border: none !important;
+
+    page-break-before: auto !important;
+
+    page-break-after: always !important;
+
+    page-break-inside: avoid !important;
+
+    break-before: auto !important;
+
+    break-after: page !important;
+
+    break-inside: avoid !important;
+  }
+
+
+  /* -----------------------------------------
+     LAST PAGE
+     Don't create page 5
+  ----------------------------------------- */
+
+  #quotation-print > .quotation-page:last-child {
+
+    page-break-after: auto !important;
+
+    break-after: auto !important;
+  }
+
+
+  /* -----------------------------------------
+     KEEP PAGE CONTENT INSIDE ITS PAGE
+  ----------------------------------------- */
+
+  .quotation-cover,
+  .quotation-content,
+  .information-page {
+
+    width: 100% !important;
+
+    height: 100% !important;
+
+    min-height: 0 !important;
+
+    max-height: 100% !important;
+
+    box-sizing: border-box !important;
+
+    overflow: hidden !important;
+  }
+
+
+  /* -----------------------------------------
+     DON'T SPLIT IMPORTANT CONTENT
+  ----------------------------------------- */
+
+  .cover-header,
+  .cover-title,
+  .cover-products,
+  .cover-product-card,
+  .cover-introduction,
+  .deals-section,
+  .cover-footer,
+
+  .quotation-header,
+  .customer-section,
+  .customer-grid,
+  .quotation-table,
+  .quotation-table tr,
+  .billing-section,
+  .transport-note,
+  .bank-details,
+  .bank-grid,
+  .quotation-signature,
+
+  .commercial-company-box,
+  .info-section,
+  .bank-details-large,
+  .commercial-note,
+  .commercial-signature,
+
+  .information-page > h1,
+  .info-footer {
+
+    break-inside: avoid !important;
+
+    page-break-inside: avoid !important;
+  }
+
+
+  /* -----------------------------------------
+     TABLE HEADER REPEAT
+  ----------------------------------------- */
+
+  .quotation-table thead {
+    display: table-header-group !important;
+  }
+
+
+  .quotation-table tfoot {
+    display: table-footer-group !important;
+  }
+
+
+  /* -----------------------------------------
+     TABLE
+  ----------------------------------------- */
+
+  .quotation-table {
+
+    width: 100% !important;
+
+    max-width: 100% !important;
+
+    table-layout: fixed !important;
+
+    border-collapse: collapse !important;
+
+    margin-top: 18px !important;
+  }
+
+
+  .quotation-table th,
+  .quotation-table td {
+
+    box-sizing: border-box !important;
+
+    word-break: normal !important;
+
+    overflow-wrap: anywhere !important;
+  }
+
+
+  /* -----------------------------------------
+     KEEP BILLING FROM SHIFTING
+  ----------------------------------------- */
+
+  .billing-section {
+
+    width: 45% !important;
+
+    margin-left: auto !important;
+
+    margin-right: 0 !important;
+  }
+
+
+  /* -----------------------------------------
+     KEEP BANK GRID STABLE
+  ----------------------------------------- */
+
+  .bank-grid {
+
+    width: 100% !important;
+
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+
+  .bank-details-large {
+
+    width: 100% !important;
+
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+
+  /* -----------------------------------------
+     KEEP PAGE 4 FOOTER AT BOTTOM
+  ----------------------------------------- */
+
+  .information-page {
+
+    display: flex !important;
+
+    flex-direction: column !important;
+  }
+
+
+  .info-footer {
+
+    margin-top: auto !important;
+  }
+
+
+  /* -----------------------------------------
+     FORCE PRINT COLORS
+  ----------------------------------------- */
+
+  .quotation-page,
+  .cover-footer,
+  .info-footer,
+  .quotation-table th,
+  .customer-section h3,
+  .bank-details h3,
+  .transport-note,
+  .commercial-note {
+
+    -webkit-print-color-adjust: exact !important;
+
+    print-color-adjust: exact !important;
+  }
+
+
+  /* -----------------------------------------
+     IMAGES
+  ----------------------------------------- */
+
+  img {
+
+    -webkit-print-color-adjust: exact !important;
+
+    print-color-adjust: exact !important;
+  }
+}
+
+
+/* =========================================================
+   SCREEN RESPONSIVE
+========================================================= */
+
+/* =========================================================
+   RESPONSIVE PREVIEW
+   DESKTOP + TABLET + MOBILE
+========================================================= */
+
+/* =========================================================
+   DESKTOP
+========================================================= */
+
+@media screen and (min-width: 801px) {
+
+  .quotation-preview-overlay {
+    width: 100vw;
+    height: 100vh;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    box-sizing: border-box;
+
+    padding: 80px 20px 40px;
+  }
+
+  #quotation-print {
+    width: 210mm;
+    margin: 0 auto;
+  }
+
+  .quotation-page {
+    width: 210mm;
+    height: 297mm;
+
+    margin: 0 auto 20px;
+
+    padding: 14mm;
+
+    box-sizing: border-box;
+
+    background: #fff;
+
+    overflow: hidden;
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media screen and (min-width: 501px) and (max-width: 800px) {
+
+  .quotation-preview-overlay {
+    width: 100vw;
+    height: 100vh;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    padding: 70px 15px 30px;
+
+    box-sizing: border-box;
+  }
+
+
+  .quotation-preview-toolbar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 60px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 8px 15px;
+
+    box-sizing: border-box;
+
+    z-index: 10000;
+  }
+
+
+  #quotation-print {
+
+    width: 210mm;
+
+    margin: 0 auto;
+
+  }
+
+
+  .quotation-page {
+
+    width: 210mm;
+    height: 297mm;
+
+    margin: 0 auto 20px;
+
+    padding: 14mm;
+
+    box-sizing: border-box;
+
+    background: white;
+
+    overflow: hidden;
+
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+/* =========================================================
+   MOBILE PREVIEW - CENTERED A4
+========================================================= */
+
+@media screen and (max-width: 500px) {
+
+  .quotation-preview-overlay {
+    position: fixed;
+    inset: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: #525659;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    padding-top: 64px;
+    padding-bottom: 20px;
+
+    box-sizing: border-box;
+
+    -webkit-overflow-scrolling: touch;
+  }
+
+
+  /* =======================================================
+     TOOLBAR
+  ======================================================= */
+
+  .quotation-preview-toolbar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+    height: 58px;
+
+    background: #0f172a;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 6px;
+
+    padding: 7px 8px;
+
+    box-sizing: border-box;
+
+    z-index: 10000;
+  }
+
+
+  .preview-close-btn,
+  .preview-print-btn {
+    border: none;
+    border-radius: 6px;
+
+    padding: 9px 11px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    white-space: nowrap;
+  }
+
+
+  /* =======================================================
+     PRINT DOCUMENT
+  ======================================================= */
+
+  #quotation-print {
+
+    width: 210mm;
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+    transform-origin: top left;
+
+  }
+
+
+  /* =======================================================
+     A4 PAGE
+  ======================================================= */
+
+  .quotation-page {
+
+    width: 210mm;
+
+    height: 297mm;
+
+    min-height: 297mm;
+    max-height: 297mm;
+
+    padding: 14mm;
+
+    margin: 0 0 20px 0;
+
+    box-sizing: border-box;
+
+    background: #fff;
+
+    overflow: hidden;
+
+    position: relative;
+
+  }
+
+
+  /* =======================================================
+     320px AND BELOW
+  ======================================================= */
+
+  @media (max-width: 320px) {
+
+    #quotation-print {
+
+      transform: scale(0.38);
+
+      transform-origin: top left;
+
+      margin-left: 4vw;
+
+      height: calc(
+        1188mm * 0.38 + 30px
+      );
+
+    }
+
+  }
+
+
+  /* =======================================================
+     321px - 360px
+  ======================================================= */
+
+  @media (min-width: 321px) and (max-width: 360px) {
+
+    #quotation-print {
+
+      transform: scale(0.42);
+
+      transform-origin: top left;
+
+      margin-left: 4vw;
+
+      height: calc(
+        1188mm * 0.42 + 30px
+      );
+
+    }
+
+  }
+
+
+  /* =======================================================
+     361px - 380px
+  ======================================================= */
+
+  @media (min-width: 361px) and (max-width: 380px) {
+
+    #quotation-print {
+
+      transform: scale(0.44);
+
+      transform-origin: top left;
+
+      margin-left: 4vw;
+
+      height: calc(
+        1188mm * 0.44 + 30px
+      );
+
+    }
+
+  }
+
+
+  /* =======================================================
+     381px - 400px
+  ======================================================= */
+
+  @media (min-width: 381px) and (max-width: 400px) {
+
+    #quotation-print {
+
+      transform: scale(0.46);
+
+      transform-origin: top left;
+
+      margin-left: 4vw;
+
+      height: calc(
+        1188mm * 0.46 + 30px
+      );
+
+    }
+
+  }
+
+
+  /* =======================================================
+     401px - 430px
+  ======================================================= */
+
+  @media (min-width: 401px) and (max-width: 430px) {
+
+    #quotation-print {
+
+      transform: scale(0.48);
+
+      transform-origin: top left;
+
+      margin-left: 3vw;
+
+      height: calc(
+        1188mm * 0.48 + 30px
+      );
+
+    }
+
+  }
+
+
+  /* =======================================================
+     431px - 500px
+  ======================================================= */
+
+  @media (min-width: 431px) and (max-width: 500px) {
+
+    #quotation-print {
+
+      transform: scale(0.55);
+
+      transform-origin: top left;
+
+      margin-left: 2vw;
+
+      height: calc(
+        1188mm * 0.55 + 30px
+      );
+
+    }
+
+  }
+
+
+  /* =======================================================
+     LAST PAGE
+  ======================================================= */
+
+  .quotation-page:last-child {
+    margin-bottom: 0;
+  }
+
+}
+
+/* =========================================================
+   FINAL MOBILE PREVIEW FIX
+   Fixes page shifted to right on 360px / 412px devices
+========================================================= */
+
+@media screen and (max-width: 600px) {
+
+  /* -------------------------------------------------------
+     PREVIEW OVERLAY
+  ------------------------------------------------------- */
+
+  .quotation-preview-overlay {
+    position: fixed !important;
+
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+
+    width: 100vw !important;
+    max-width: 100vw !important;
+
+    margin: 0 !important;
+    padding: 64px 0 20px 0 !important;
+
+    box-sizing: border-box !important;
+
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+
+    background: #525659 !important;
+  }
+
+
+  /* -------------------------------------------------------
+     TOOLBAR
+  ------------------------------------------------------- */
+
+  .quotation-preview-toolbar {
+    position: fixed !important;
+
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+
+    width: 100vw !important;
+    max-width: 100vw !important;
+
+    height: 64px !important;
+
+    box-sizing: border-box !important;
+
+    padding: 8px 10px !important;
+
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+
+    gap: 6px !important;
+
+    background: #0f172a !important;
+
+    z-index: 99999 !important;
+  }
+
+
+  .preview-close-btn,
+  .preview-print-btn {
+    padding: 9px 11px !important;
+
+    font-size: 11px !important;
+
+    white-space: nowrap !important;
+
+    flex-shrink: 0 !important;
+  }
+
+
+  /* -------------------------------------------------------
+     IMPORTANT:
+     RESET DESKTOP A4 WIDTH
+  ------------------------------------------------------- */
+
+  #quotation-print {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    box-sizing: border-box !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+
+    overflow: visible !important;
+  }
+
+
+  /* -------------------------------------------------------
+     A4 PAGE
+  ------------------------------------------------------- */
+
+  .quotation-page {
+    width: calc(100vw - 20px) !important;
+
+    max-width: calc(100vw - 20px) !important;
+
+    height: auto !important;
+
+    min-height: 0 !important;
+    max-height: none !important;
+
+    aspect-ratio: 210 / 297 !important;
+
+    margin: 0 auto 12px auto !important;
+
+    padding: 6% !important;
+
+    box-sizing: border-box !important;
+
+    flex-shrink: 0 !important;
+
+    overflow: hidden !important;
+
+    background: #ffffff !important;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25) !important;
+
+    position: relative !important;
+
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+  }
+
+
+  /* -------------------------------------------------------
+     PAGE 1 - COVER
+  ------------------------------------------------------- */
+
+  .quotation-cover {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+
+  .cover-header {
+    display: flex !important;
+
+    flex-direction: row !important;
+
+    align-items: center !important;
+
+    gap: 10px !important;
+
+    padding-bottom: 8px !important;
+  }
+
+
+  .company-logo-box {
+    width: 55px !important;
+    min-width: 55px !important;
+  }
+
+
+  .company-logo {
+    max-height: 55px !important;
+  }
+
+
+  .company-details {
+    min-width: 0 !important;
+  }
+
+
+  .company-details h1 {
+    font-size: 13px !important;
+
+    margin-bottom: 3px !important;
+
+    letter-spacing: 0 !important;
+  }
+
+
+  .company-details p {
+    font-size: 5.5px !important;
+
+    line-height: 1.35 !important;
+
+    margin: 1px 0 !important;
+  }
+
+
+  .cover-title {
+    margin: 10px 0 7px !important;
+  }
+
+
+  .cover-title h2 {
+    font-size: 16px !important;
+
+    margin-bottom: 3px !important;
+  }
+
+
+  .cover-title p {
+    font-size: 6px !important;
+  }
+
+
+  .cover-products {
+    grid-template-columns: repeat(2, 1fr) !important;
+
+    gap: 7px !important;
+
+    margin-top: 5px !important;
+  }
+
+
+  .cover-product-card {
+    border-radius: 4px !important;
+  }
+
+
+  .cover-product-card img {
+    width: 100% !important;
+
+    height: auto !important;
+
+    aspect-ratio: 1.55 / 1 !important;
+
+    object-fit: cover !important;
+  }
+
+
+  .cover-product-card p {
+    font-size: 6px !important;
+
+    padding: 3px !important;
+  }
+
+
+  .cover-introduction {
+    margin-top: 9px !important;
+
+    padding: 6px 8px !important;
+
+    border-left-width: 2px !important;
+  }
+
+
+  .cover-introduction h3 {
+    font-size: 7px !important;
+
+    margin-bottom: 3px !important;
+  }
+
+
+  .cover-introduction p {
+    font-size: 5px !important;
+
+    line-height: 1.35 !important;
+  }
+
+
+  .deals-section {
+    padding-top: 7px !important;
+
+    margin-top: auto !important;
+  }
+
+
+  .deals-section h3 {
+    font-size: 8px !important;
+
+    margin-bottom: 3px !important;
+  }
+
+
+  .deals-section p {
+    font-size: 5px !important;
+
+    line-height: 1.4 !important;
+  }
+
+
+  .cover-footer {
+    margin-top: 7px !important;
+
+    padding: 5px !important;
+
+    font-size: 5px !important;
+  }
+
+
+  /* -------------------------------------------------------
+     PAGE 2 - QUOTATION
+  ------------------------------------------------------- */
+
+  .quotation-content {
+    width: 100% !important;
+    height: 100% !important;
+
+    font-size: 6px !important;
+
+    box-sizing: border-box !important;
+  }
+
+
+  .quotation-header {
+    width: 100% !important;
+
+    display: flex !important;
+
+    flex-direction: row !important;
+
+    justify-content: space-between !important;
+
+    align-items: flex-start !important;
+
+    gap: 8px !important;
+
+    padding-bottom: 7px !important;
+
+    border-bottom: 1px solid #1e3a8a !important;
+  }
+
+
+  .quotation-company {
+    min-width: 0 !important;
+    flex: 1 !important;
+  }
+
+
+  .quotation-header h1 {
+    font-size: 13px !important;
+
+    margin-bottom: 3px !important;
+  }
+
+
+  .quotation-header p {
+    font-size: 5.5px !important;
+
+    line-height: 1.35 !important;
+
+    margin: 1px 0 !important;
+  }
+
+
+  .quotation-meta {
+    min-width: 95px !important;
+
+    width: 95px !important;
+
+    flex-shrink: 0 !important;
+
+    text-align: right !important;
+  }
+
+
+  .quotation-meta h2 {
+    font-size: 13px !important;
+
+    margin-bottom: 4px !important;
+  }
+
+
+  .quotation-meta p {
+    font-size: 5px !important;
+
+    white-space: nowrap !important;
+  }
+
+
+  /* CUSTOMER */
+
+  .customer-section {
+    margin-top: 7px !important;
+  }
+
+
+  .customer-section h3,
+  .bank-details h3 {
+    font-size: 6px !important;
+
+    padding: 4px 6px !important;
+  }
+
+
+  .customer-grid {
+    grid-template-columns: 1fr 1fr !important;
+
+    width: 100% !important;
+  }
+
+
+  .customer-grid > div {
+    padding: 4px !important;
+
+    min-height: 20px !important;
+
+    font-size: 5px !important;
+  }
+
+
+  /* TABLE */
+
+  .quotation-table {
+    width: 100% !important;
+
+    margin-top: 7px !important;
+  }
+
+
+  .quotation-table th,
+  .quotation-table td {
+    padding: 3px 2px !important;
+
+    font-size: 5px !important;
+
+    line-height: 1.25 !important;
+  }
+
+
+  .quotation-table th:nth-child(1),
+  .quotation-table td:nth-child(1) {
+    width: 8% !important;
+  }
+
+
+  .quotation-table th:nth-child(2),
+  .quotation-table td:nth-child(2) {
+    width: 48% !important;
+  }
+
+
+  .quotation-table th:nth-child(3),
+  .quotation-table td:nth-child(3) {
+    width: 10% !important;
+  }
+
+
+  .quotation-table th:nth-child(4),
+  .quotation-table td:nth-child(4) {
+    width: 17% !important;
+  }
+
+
+  .quotation-table th:nth-child(5),
+  .quotation-table td:nth-child(5) {
+    width: 17% !important;
+  }
+
+
+  .item-description {
+    font-size: 4.5px !important;
+
+    margin-top: 1px !important;
+  }
+
+
+  /* BILLING */
+
+  .billing-section {
+    width: 48% !important;
+
+    margin-top: 6px !important;
+  }
+
+
+  .billing-row {
+    padding: 2px 0 !important;
+
+    font-size: 5.5px !important;
+
+    gap: 5px !important;
+  }
+
+
+  .billing-total {
+    padding-top: 4px !important;
+
+    font-size: 7px !important;
+
+    border-top-width: 1px !important;
+  }
+
+
+  /* TRANSPORT */
+
+  .transport-note {
+    margin-top: 7px !important;
+
+    padding: 5px !important;
+
+    gap: 3px !important;
+
+    font-size: 5px !important;
+  }
+
+
+  /* -------------------------------------------------------
+     PAGE 3
+  ------------------------------------------------------- */
+
+  .commercial-company-box {
+    padding: 7px !important;
+
+    margin-bottom: 8px !important;
+  }
+
+
+  .commercial-company-box h2 {
+    font-size: 10px !important;
+
+    margin-bottom: 4px !important;
+  }
+
+
+  .commercial-company-box p {
+    font-size: 5.5px !important;
+
+    line-height: 1.35 !important;
+
+    margin: 2px 0 !important;
+  }
+
+
+  .info-section {
+    margin-bottom: 8px !important;
+  }
+
+
+  .info-section h2 {
+    font-size: 8px !important;
+
+    padding-bottom: 3px !important;
+
+    margin-bottom: 4px !important;
+  }
+
+
+  .info-section p,
+  .info-section li {
+    font-size: 5.5px !important;
+
+    line-height: 1.35 !important;
+  }
+
+
+  .info-section ul,
+  .info-section ol {
+    padding-left: 14px !important;
+
+    margin-top: 2px !important;
+  }
+
+
+  .info-section li {
+    margin-bottom: 2px !important;
+  }
+
+
+  .bank-details-large > div {
+    padding: 5px !important;
+  }
+
+
+  .bank-details-large strong {
+    font-size: 5px !important;
+  }
+
+
+  .bank-details-large span {
+    font-size: 5.5px !important;
+  }
+
+
+  .commercial-note {
+    margin-top: 8px !important;
+
+    padding: 6px !important;
+
+    font-size: 5.5px !important;
+  }
+
+
+  .commercial-signature {
+    width: 90px !important;
+
+    margin-top: 12px !important;
+  }
+
+
+  .commercial-signature p {
+    font-size: 5.5px !important;
+  }
+
+
+  .commercial-signature .signature-space {
+    height: 20px !important;
+  }
+
+
+  /* -------------------------------------------------------
+     PAGE 4
+  ------------------------------------------------------- */
+
+  .information-page {
+    width: 100% !important;
+
+    height: 100% !important;
+
+    font-size: 5.5px !important;
+
+    line-height: 1.35 !important;
+  }
+
+
+  .information-page > h1 {
+    font-size: 13px !important;
+
+    padding-bottom: 6px !important;
+
+    margin-bottom: 8px !important;
+  }
+
+
+  .information-page .info-section {
+    margin-bottom: 8px !important;
+  }
+
+
+  .information-page .info-section h2 {
+    font-size: 8px !important;
+
+    padding-bottom: 3px !important;
+
+    margin-bottom: 4px !important;
+  }
+
+
+  .information-page .info-section p,
+  .information-page .info-section li {
+    font-size: 5.5px !important;
+
+    line-height: 1.35 !important;
+  }
+
+
+  .information-page .info-section ul,
+  .information-page .info-section ol {
+    padding-left: 14px !important;
+  }
+
+
+  .info-footer {
+    padding: 6px !important;
+
+    font-size: 5px !important;
+  }
+
+
+  /* -------------------------------------------------------
+     REMOVE ANY ACCIDENTAL HORIZONTAL SHIFT
+  ------------------------------------------------------- */
+
+  #quotation-print,
+  .quotation-page,
+  .quotation-cover,
+  .quotation-content,
+  .information-page {
+    transform: none !important;
+
+    left: auto !important;
+    right: auto !important;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+========================================================= */
+
+@media screen and (max-width: 380px) {
+
+  .quotation-preview-overlay {
+    padding-top: 60px !important;
+  }
+
+
+  .quotation-preview-toolbar {
+    height: 60px !important;
+  }
+
+
+  .preview-close-btn,
+  .preview-print-btn {
+    padding: 8px 9px !important;
+
+    font-size: 10px !important;
+  }
+
+
+  .quotation-page {
+    width: calc(100vw - 12px) !important;
+
+    max-width: calc(100vw - 12px) !important;
+
+    padding: 5% !important;
+
+    margin-bottom: 8px !important;
+  }
+
+}
